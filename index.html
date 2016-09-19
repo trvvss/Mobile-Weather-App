@@ -9,22 +9,30 @@
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
       <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <link rel="stylesheet" type="text/css href="css/stylesheet.css"/>
   </head>
 
   <body>
     <div data-role="page">
-      <div data-role="panel" id="left-panel">
+      <div data-role="panel" id="left-panel" data-theme="a">
           <!-- panel content goes here -->
-          <ul>
-            <li>Close</li>
-          </ul>
+          <ul data-theme="a" data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+            <li data-role="list-divider">Select a City</li>
+              <li><a href="#" class="city" data-rel="close">Current Location</a></li>
+              <li><a href="#" class="city" data-rel="close">Seattle</a></li>
+              <li><a href="#" class="city" data-rel="close">Los Angeles</a></li>
+              <li><a href="#" class="city" data-rel="close">New York City</a></li>
+              <li><a href="#" class="city" data-rel="close">Barcelona</a></li>
+              <li><a href="#" class="city" data-rel="close">Seoul</a></li>
+            </ul>
       </div><!-- /panel -->
-    	<div data-role="header" data-position="fixed">
+    	<div data-role="header" data-theme="a" data-position="fixed">
         <h1>WEATHER WATCH</h1>
         <a href="#left-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-bars">Menu</a>
       </div>
     	<div role="main" class="ui-content">
-        <h1 id="current_temp">65&#176F</h1>
+        <h1 id="current_temp" class="icon" data-icon="H">65&#176F</h1>
         <p id="current_summary">Partly Cloudy</p>
         <p id="location">Current Location</p>
       </div>
