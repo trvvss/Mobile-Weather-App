@@ -4,6 +4,8 @@
   <head>
       <title>GOOD WEATHER</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
+      <link rel="stylesheet" href="css/themes/ThemeRoller.css"/>
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
       <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -11,15 +13,21 @@
 
   <body>
     <div data-role="page">
-      <div data-role="panel" id="mypanel">
+      <div data-role="panel" id="left-panel">
           <!-- panel content goes here -->
+          <ul>
+            <li>Close</li>
+          </ul>
       </div><!-- /panel -->
-
     	<div data-role="header" data-position="fixed">
-
+        <h1>WEATHER WATCH</h1>
+        <a href="#left-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-bars">Menu</a>
       </div>
-    	<div role="main" class="ui-content">...</div>
-    	<div data-role="footer">...</div>
+    	<div role="main" class="ui-content">
+        <h1 id="current_temp">65&#176F</h1>
+        <p id="current_summary">Partly Cloudy</p>
+        <p id="location">Current Location</p>
+      </div>
     </div>
   </body>
 </html>
